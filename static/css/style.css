@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Meow Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/static/meowscript.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    background-color: #F9DBBA;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+footer {
+    text-align: center;
+}
+
+main {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+header h1 {
+    color: #1A4870;
+    font-family: "Meow Script", serif;
+    font-size: 50pt;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #1A4870;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, p, li, th, td {
+    color: #1A4870;
+}
+
+a {
+    color: #5B99C2;
+}
+
+.hero img {
+    max-width: 100%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-rows: masonry;
+}
+
+.gallery img {
+    max-width: 100%;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
